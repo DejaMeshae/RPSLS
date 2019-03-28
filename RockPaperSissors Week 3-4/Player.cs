@@ -10,8 +10,9 @@ namespace RockPaperSissors_Week_3_4
     {
         //member variables (Has A)
         List<HandGesters> Gesters = new List<HandGesters>();
+        
 
-        //switch case example fromc# flow video
+        
         
 
 
@@ -23,6 +24,7 @@ namespace RockPaperSissors_Week_3_4
         }
 
         //memeber methods (Can Do)
+        //put a switch case example from c# flow video either here or game class 
 
     }
 }

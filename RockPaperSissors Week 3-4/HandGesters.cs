@@ -9,11 +9,7 @@ namespace RockPaperSissors_Week_3_4
     public class HandGesters
     {
         //member variables (Has A)
-        Rock RockGesture;
-        Paper PaperGesture;
-        Scissors ScissorsGesture;
-        Lizard LizardGesture;
-        Spock SpockGesture;
+        
 
 
         //constructor (Build This)

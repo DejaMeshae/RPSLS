@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RockPaperSissors_Week_3_4
 {
-    public class Paper: HandGesters
+    public class Human:Player
     {
         //member variables (Has A)
 
@@ -14,8 +14,7 @@ namespace RockPaperSissors_Week_3_4
         //constructor (Build This)
 
 
-        //memeber methods (Can Do)
-
-
+        //member methods (Can Do)
+        
     }
 }
