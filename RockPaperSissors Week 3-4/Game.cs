@@ -15,29 +15,40 @@ namespace RockPaperSissors_Week_3_4
         int rounds;       //datatype int, round is a number
 
 
-        //constructor (Build This)
 
-          
+        //constructor (Build This)
+       
+        
+
+
 
 
         //member methods (Can Do)
-        public void CreatePlayers() //notice everything is captalized
+        public void RunGame()
         {
-            Console.WriteLine("How many players are there? 1 or 2?");
-            string userInput = Console.ReadLine();
+
+            CreatePlayers();
+            // do all the things here
+        }
+
+        public void CreatePlayers() //notice the first letter is captalized this creates the method 
+        {
+            Console.WriteLine("How many players are there? 1 or 2?"); 
+            string userInput = Console.ReadLine(); //ReadLine takes in an input 
             if (userInput == "1")
             {
                 playerOne = new Human();
                 playerTwo = new Ai();
             }
             else if (userInput == "2")
-            { 
+            {
                 playerOne = new Human();
                 playerTwo = new Human();
             }
-            else if (userInput == "anything else")
+            else 
             {
                 Console.WriteLine("Please enter either 1 or 2. AS STATED ABOVE *angry face*");
+                Console.ReadLine();
             }
         }
     }
