@@ -10,23 +10,18 @@ namespace RockPaperSissors_Week_3_4
     {
         //member variables (Has A)
         Rock RockGesture;
-        string PaperGesture;
-        string ScissorsGesture;
-        string LizardGesture;
-        string SpockGesture;
+        Paper PaperGesture;
+        Scissors ScissorsGesture;
+        Lizard LizardGesture;
+        Spock SpockGesture;
 
-
-
-        
 
         //constructor (Build This)
 
 
         //memeber methods (Can Do)
-        public Start()
-        {
-            Console.WriteLine("Lets Start the game"); //or something to the effect of "shoot"
-        }
+        
+    
 
 
     }
