@@ -9,7 +9,7 @@ namespace RockPaperSissors_Week_3_4
     public class HandGesters
     {
         //member variables (Has A)
-        
+        //might delete this class
 
 
         //constructor (Build This)
