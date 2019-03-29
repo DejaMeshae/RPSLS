@@ -20,11 +20,6 @@ namespace RockPaperSissors_Week_3_4
 
             //Human human = new Human(); ////instanciate the class
 
-
-
-
-
-
      
         }
     }

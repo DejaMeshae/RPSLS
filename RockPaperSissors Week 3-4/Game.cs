@@ -34,9 +34,7 @@ namespace RockPaperSissors_Week_3_4
         public void RunGame() // do all the things here call all methods here 
         {
             CreatePlayers();
-            playerOne.name = PlayersTypeInName(); //this establish player one name
-            playerTwo.name = PlayersTypeInName(); //this establish player two name
-            DisplayRound();
+            Compare(); 
         }
 
 
@@ -64,25 +62,57 @@ namespace RockPaperSissors_Week_3_4
         }
 
 
-        public string PlayersTypeInName()  
-        {
-            Console.WriteLine("Player One please enter your name");
-            string name = Console.ReadLine(); 
-            Console.WriteLine("Good Luck " + name);
-            return name; //return it to have player 2 enter their name
-        }
-
-
+     
         public void Compare()//method to compare gestures 
         {
-               //method to compare gesture here
+            if (playerOne.gesture == playerTwo.gesture)
+            {
+                Console.WriteLine("It's a tie, lets play again!");
+            }
+               else if (playerOne.gesture == "Rock" && playerTwo.gesture == "Scissors" ||
+                playerTwo.gesture == "Lizard")
+            {
+                Console.WriteLine(playerOne.name + " wins this round!");
+                playerOne.score++;
+            }
+                else if (playerOne.gesture == "Scissors" && playerTwo.gesture == "Paper" ||
+                playerTwo.gesture == "Lizard")
+            {
+                Console.WriteLine(playerOne.name + " wins this round!");
+                playerOne.score++;
+            }
+                else if (playerOne.gesture == "Paper" && playerTwo.gesture == "Rock" ||
+                playerTwo.gesture == "Spock")
+            {
+                Console.WriteLine(playerOne.name + " wins this round!");
+                playerOne.score++;
+            }
+                else if (playerOne.gesture == "Spock" && playerTwo.gesture == "Scissors" ||
+                playerTwo.gesture == "Rock")
+            {
+                Console.WriteLine(playerOne.name + " wins this round!");
+                playerOne.score++;
+            }
+                else if (playerOne.gesture == "Lizard" && playerTwo.gesture == "Paper" ||
+                playerTwo.gesture == "Spock")
+            {
+                    Console.WriteLine(playerOne.name + " wins this round!");
+                    playerOne.score++;
+            }
+                else
+            {
+                playerTwo.score++;
+                Console.WriteLine(playerTwo.name + "Won the game!");
+            }
+            DisplayRound(); //DisplayRound outside of the if else statement
         }
 
 
         public void DisplayRound() 
         {
-            rounds++;
+            rounds++; //in the constructor round starts at 1 so it displays after the first rock paper scissors then ++ adds 1 so it goes to round 2
             Console.WriteLine(rounds);
+            //figure out how to get the best 2 out of 3 round so not end it after 3 round like I was thinking
         }
 
     }

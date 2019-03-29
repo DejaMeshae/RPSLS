@@ -15,9 +15,19 @@ namespace RockPaperSissors_Week_3_4
 
 
         //constructor (Build This)
+        public Human()
+        {
+            name = PlayersTypeInName();
+        }
 
-            
         //member methods (Can Do)
+        public string PlayersTypeInName()
+        {
+            Console.WriteLine("Player One please enter your name");
+            string name = Console.ReadLine();
+            Console.WriteLine("Good Luck " + name);
+            return name; //return it to have player 2 enter their name. but if its only one player it will still return. i dont want that
+        }
         public override void ChoicesOutput()
         {
             Console.WriteLine("Choose Rock, paper,scissors, lizard, or spock"); //asks human player choose what gesture they want

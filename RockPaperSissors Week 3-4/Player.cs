@@ -9,8 +9,7 @@ namespace RockPaperSissors_Week_3_4
     public abstract class Player //the Parent Class
     {
         //member variables (Has A) 
-        public int scorePlayerOne;
-        public int scorePlayerTwo;
+        public int score;
         public int scoreAi; 
         public string name;
         public List<string> gestures;
@@ -34,9 +33,7 @@ namespace RockPaperSissors_Week_3_4
        
 
 
-            scorePlayerOne = 0; //to start the score off at 0. refer to c# methods and class demo video
-            scorePlayerTwo = 0;
-            scoreAi = 0;
+            score = 0; //to start the score off at 0. refer to c# methods and class demo video
         }
 
 
