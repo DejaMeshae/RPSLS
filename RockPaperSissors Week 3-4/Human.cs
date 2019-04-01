@@ -27,6 +27,7 @@ namespace RockPaperSissors_Week_3_4
         {
             Console.WriteLine("Player One please enter your name"); 
             string name = Console.ReadLine();
+            name = name.ToUpper();
             Console.WriteLine("Good Luck " + name);
             return name; 
         }

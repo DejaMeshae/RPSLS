@@ -9,7 +9,7 @@ namespace RockPaperSissors_Week_3_4
     class Game
     {
         //member variables (Has A)
-        Player playerOne; //Player is a class and also a datatype 
+        Player playerOne;  
         Player playerTwo;
         Player aI;
         int rounds;
@@ -45,11 +45,12 @@ namespace RockPaperSissors_Week_3_4
         public void CreatePlayers()  
         {
             Console.WriteLine("How many players are there? 1 or 2?"); 
-            string userInput = Console.ReadLine(); //ReadLine takes in an input 
+            string userInput = Console.ReadLine(); 
             if (userInput == "1")
             {
                 playerOne = new Human();
                 playerTwo = new Ai();
+                Console.WriteLine("You will play against the computer.");
             }
             else if (userInput == "2")
             {
@@ -111,27 +112,32 @@ namespace RockPaperSissors_Week_3_4
                 else
             {
                 playerTwo.score++;
-                Console.WriteLine(playerTwo.nametoo + " Won the game!");
+                Console.WriteLine(playerTwo.name + " Won the game!");
             }
             DisplayRound(); 
             DisplayScore();
-            Console.ReadLine();       
+            Console.ReadLine();
         }
 
+        //public void BadInputs()
+        //{
+        // (playerOne.gesture!= "Lizard, Rock, Paper, Scissors, Spock" && playerTwo.gesture != "Lizard, Rock, Paper, Scissors, Spock")
+        //    {
+        //            Console.WriteLine("Please only enter your choice of Rock, Paper, Scissors, Lizard, Spock");
+        //    }
 
-        public void DisplayRound() 
+
+
+    public void DisplayRound() 
         {
             rounds++; 
             Console.WriteLine("This is now round " + rounds);
             Compare();
-            //figure out how to get the best 2 out of 3 round so not end it after 3 round like I was thinking
         }
 
 
-        public void  DisplayScore() //display the score based of the 2 out of 3 game  
+        public void  DisplayScore()  
            {
-             playerTwo.score++;
-             playerOne.score++;
             Console.WriteLine(playerOne.name + " score is now " + playerOne.score);
             Console.WriteLine(playerTwo.name + " score is now " + playerTwo.score);
             Console.ReadLine();

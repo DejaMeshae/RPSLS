@@ -10,7 +10,7 @@ namespace RockPaperSissors_Week_3_4
     {
         //member variables (Has A)
         int randomInt;
-        Player aI;
+        Player playerTwo;
         Player playerOne;
 
 
@@ -32,37 +32,37 @@ namespace RockPaperSissors_Week_3_4
         public override void ChoicesOutput()
         {
             randomInt = randomNumber.Next(0, 4);
-            if (playerOne.gesture == aI.gesture)
+            if (playerOne.gesture == playerTwo.gesture)
             {
                 Console.WriteLine("It's a tie, lets play again!");
                 return;
             }
-            else if (playerOne.gesture == "Rock" && aI.gesture == "Scissors" || //can i replace aI.gesture == "Scissors" with aI.gesture == gestures[0] and itll reference the list
-              aI.gesture == "Lizard")
+            else if (playerOne.gesture == "Rock" && playerTwo.gesture == "Scissors" || //can i replace aI.gesture == "Scissors" with aI.gesture == gestures[0] and itll reference the list
+              playerTwo.gesture == "Lizard")
             {
                 Console.WriteLine(playerOne.name + " wins this round!");
                 playerOne.score++;
             }
-            else if (playerOne.gesture == "Scissors" && aI.gesture == "Paper" ||
-               aI.gesture == "Lizard")
+            else if (playerOne.gesture == "Scissors" && playerTwo.gesture == "Paper" ||
+               playerTwo.gesture == "Lizard")
             {
                 Console.WriteLine(playerOne.name + " wins this round!");
                 playerOne.score++;
             }
-            else if (playerOne.gesture == "Paper" && aI.gesture == "Rock" ||
-            aI.gesture == "Spock")
+            else if (playerOne.gesture == "Paper" && playerTwo.gesture == "Rock" ||
+            playerTwo.gesture == "Spock")
             {
                 Console.WriteLine(playerOne.name + " wins this round!");
                 playerOne.score++;
             }
-            else if (playerOne.gesture == "Spock" && aI.gesture == "Scissors" ||
-            aI.gesture == "Rock")
+            else if (playerOne.gesture == "Spock" && playerTwo.gesture == "Scissors" ||
+            playerTwo.gesture == "Rock")
             {
                 Console.WriteLine(playerOne.name + " wins this round!");
                 playerOne.score++;
             }
-            else if (playerOne.gesture == "Lizard" && aI.gesture == "Paper" ||
-            aI.gesture == "Spock")
+            else if (playerOne.gesture == "Lizard" && playerTwo.gesture == "Paper" ||
+            playerTwo.gesture == "Spock")
             {
                 Console.WriteLine(playerOne.name + " wins this round!");
                 playerOne.score++;
