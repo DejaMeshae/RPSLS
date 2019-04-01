@@ -12,13 +12,14 @@ namespace RockPaperSissors_Week_3_4
         Player playerOne; //Player is a class and also a datatype 
         Player playerTwo;
         Player aI;
-        int rounds;       
+        int rounds;
+        public int scoreAi;
+        bool playAgain = true;
 
 
 
 
         //constructor (Build This)
-        Human human = new Human(); //instanciate in the constructor class 
 
 
         public Game()
@@ -33,8 +34,10 @@ namespace RockPaperSissors_Week_3_4
         //member methods (Can Do)
         public void RunGame() // do all the things here call all methods here 
         {
+            HowToPlay();
             CreatePlayers();
-            Compare(); 
+            Compare();
+            PlayAgain();
         }
 
 
@@ -58,13 +61,19 @@ namespace RockPaperSissors_Week_3_4
                 Console.WriteLine("Please enter either 1 or 2. AS STATED ABOVE *angry face*");
                 Console.ReadLine();
             }
-            return; 
         }
 
+        public void HowToPlay()
+        {
+            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock! This game can be played with 1 or 2 players. In order to win you must win the 2 out of 3 rounds, if its a draw the game will continue. Good Luck! ");
+        }
 
      
         public void Compare()//method to compare gestures 
         {
+            Console.WriteLine("Choose Rock, paper,scissors, lizard, or spock"); 
+            playerOne.gesture = Console.ReadLine();
+            playerTwo.gesture = Console.ReadLine();
             if (playerOne.gesture == playerTwo.gesture)
             {
                 Console.WriteLine("It's a tie, lets play again!");
@@ -102,28 +111,56 @@ namespace RockPaperSissors_Week_3_4
                 else
             {
                 playerTwo.score++;
-                Console.WriteLine(playerTwo.name + "Won the game!");
+                Console.WriteLine(playerTwo.nametoo + " Won the game!");
             }
-            DisplayRound(); //DisplayRound outside of the if else statement
+            DisplayRound(); 
+            DisplayScore();
+            Console.ReadLine();       
         }
 
 
         public void DisplayRound() 
         {
-            rounds++; //in the constructor round starts at 1 so it displays after the first rock paper scissors then ++ adds 1 so it goes to round 2
-            Console.WriteLine(rounds);
+            rounds++; 
+            Console.WriteLine("This is now round " + rounds);
+            Compare();
             //figure out how to get the best 2 out of 3 round so not end it after 3 round like I was thinking
         }
+
+
+        public void  DisplayScore() //display the score based of the 2 out of 3 game  
+           {
+             playerTwo.score++;
+             playerOne.score++;
+            Console.WriteLine(playerOne.name + " score is now " + playerOne.score);
+            Console.WriteLine(playerTwo.name + " score is now " + playerTwo.score);
+            Console.ReadLine();
+           }
+
+        public void PlayAgain()
+        {
+            Console.WriteLine("Lets play again! Type in 'yes' to play again and 'no' to quit");
+            string answertoplayagain = Console.ReadLine();
+            if (answertoplayagain == "yes")
+            {
+                playAgain = true;
+            }
+            else if (answertoplayagain == "no")
+            {
+                playAgain = false;
+            }
+            else
+            {
+                Console.WriteLine("Please try again");
+                Console.ReadLine();
+            }
+            return;
+        }   
 
     }
 }
 
-          /*public void  DisplayScore() //display the score based of the 2 out of 3 game  
-            {
-                Console.WriteLine(overallScore); //declare it in the constructor? but how need a method to actually calculate the score?
-                Console.ReadLine();
-            }*/
-
+         
 
 
 

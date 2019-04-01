@@ -9,11 +9,11 @@ namespace RockPaperSissors_Week_3_4
     public abstract class Player //the Parent Class
     {
         //member variables (Has A) 
-        public int score;
-        public int scoreAi; 
+        public int score; 
         public string name;
         public List<string> gestures;
         public string gesture;
+        string aI;
 
 
         //constructor (Build This) //instanciate
@@ -37,19 +37,8 @@ namespace RockPaperSissors_Week_3_4
         }
 
 
-
-
         //memeber methods (Can Do)
         public abstract void ChoicesOutput(); //remeber it does not need {} a body and does not need to be instanciated 
-
-
-
-        public void DisplayScore() 
-        {
-            //Console.WriteLine(human.WhoPlaying + " score: " + scorePlayerOne); //refer to my question as to why human is coming back as null
-        } 
-
-
 
     }
 }
